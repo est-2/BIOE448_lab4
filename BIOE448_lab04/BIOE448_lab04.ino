@@ -29,7 +29,7 @@ Serial.print(" cm/");
 Serial.print(distanceInch);
 Serial.println(" in");
 
-if (distanceCm > 10) {
+if (distanceCm > 20) {
   digitalWrite(greenPin, LOW);
   digitalWrite(redPin, HIGH);
 }
