@@ -1,5 +1,5 @@
-const int trigPin = A;
-const int echoPin = B;
+const int trigPin = 11;
+const int echoPin = 12;
 long duration;
 int distanceCm, distanceInch;
 
@@ -18,5 +18,14 @@ digitalWrite(trigPin, HIGH);
 delayMicroseconds(10);
 
 duration = pulseIn(echoPin, HIGH);
+
+distanceCm = duration * 0.01724;
+distanceInch = duration * 0.006757;
+Serial.print("Distance: ");
+Serial.print(distanceCm);
+Serial.print(" cm/");
+Serial.print(distanceInch);
+Serial.println(" in");
+delay(1000);
 
 }
